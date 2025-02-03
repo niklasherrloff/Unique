@@ -46,13 +46,12 @@ export default function PostcardHighlights() {
   ];
 
   // Corrected Postcard Position (x first, y second) & Shifted Left by 50px
-  const postcardPosition = [30, 120]; // Postcard moved 50px left
+  const postcardPosition = [30, 120]; // Corrected order for x and y
 
   return (
     <div className="container">
       <h1>Create Your World-Unique Postcard</h1>
 
-      {/* Container for Postcard and Speech Bubbles */}
       <div className="canvas">
         {/* Postcard */}
         <div
@@ -60,6 +59,10 @@ export default function PostcardHighlights() {
           style={{
             left: `${postcardPosition[0]}px`,
             top: `${postcardPosition[1]}px`,
+            backgroundImage: "url('/images/postcard-background.jpg')",
+
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
           }}
         >
           {/* Sections inside the Postcard */}
@@ -133,13 +136,12 @@ export default function PostcardHighlights() {
 
         .postcard {
           position: absolute;
-          background: white;
           border: 1px solid #d1d5db;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           border-radius: 8px;
           padding: 16px;
-          width: 780px; /* 130% of original 600px */
-          height: 520px; /* 130% of original 400px */
+          width: 780px;
+          height: 520px;
         }
 
         .content-box {
