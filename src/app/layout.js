@@ -10,15 +10,6 @@ export default function RootLayout({ children }) {
 
         {/* Main Content */}
         <main className="flex-1 p-6">
-          <header className="mb-6">
-            <h1 className="text-3xl font-bold">
-              Create Your World-Unique Postcard
-            </h1>
-            <p className="text-gray-600">
-              Customize your postcard with unique features and designs.
-            </p>
-          </header>
-
           <section className="flex gap-6">
             {/* Dynamic Content */}
             <div className="flex-1">{children}</div>
